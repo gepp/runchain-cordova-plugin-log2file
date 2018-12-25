@@ -1,6 +1,6 @@
 {
   "name": "runchain-cordova-plugin-log2file",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Cordova Android plugin log2file",
   "dependencies": {}
 }
