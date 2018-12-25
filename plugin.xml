@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="runchain-cordova-plugin-log2file" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>runchain-cordova-plugin-log2file</name>
+    <js-module name="runchain-cordova-plugin-log2file" src="www/runchain-cordova-plugin-log2file.js">
+        <clobbers target="log2file" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="log2file" >
+                <param name="android-package" value="org.apache.cordova.logtofile.LogToFile"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>
+       <source-file src="src/android/Log2FileUtils.java" target-dir="src/main/java/com/runchain/plugins/log2file" />
+    </platform>
+</plugin>
